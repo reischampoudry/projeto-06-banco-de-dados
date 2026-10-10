@@ -1,69 +1,117 @@
-# Projeto 6 - Noções Básicas de Banco de Dados
+
+# Projeto 6 — Noções Básicas de Banco de Dados
+
+
 
 ## Sobre o projeto
 
-Projeto desenvolvido a partir das atividades do Sprint 6 da formação em Análise de Qualidade de Software (QA) da TripleTen.
+Este projeto tem como objetivo aplicar conhecimentos básicos de banco de dados e comandos Linux para analisar registros de log e executar consultas SQL.
 
-O objetivo é praticar comandos de terminal, analise de logs e consultoria em SQL em um banco de dados relacionado a corridas de táxi em Chicago.
+As atividades envolvem pesquisa e filtragem de registros, organização de arquivos, análise de dados e documentação dos resultados obtidos.
 
-## Objetivos de aprendizagem
+## Objetivos
 
-- Utilizar comandos de terminais para localizar e filtrar registros de logs.
-- Organizar arquivos e separar registros de erro HTTP.
-- Consultar dados utilizando SQL.
-- Aplicar funções de agragação e agrupamento.
-- Utilizar `CASE` para classificar condições meteorológicas.
-- Relacionar tabelas utilizando JOIN.
-- Documentar procedimentos e resultados dos exercícios.
-
+- Pesquisar registros de log utilizando comandos Linux.
+- Filtrar solicitações por endereço IP e código HTTP.
+- Organizar arquivos e diretórios no terminal.
+- Executar consultas SQL para extrair e analisar dados.
+- Documentar os comandos utilizados e os resultados encontrados.
+- Versionar e publicar o projeto utilizando Git e GitHub.
 
 ## Tecnologias e ferramentas
 
-- **Terminal do macOS**
-- **Shell e comandos Unix**
-- **SQL**
-- **PostgreSQL**
-- **Git e GitHub**
-- **Visual Studio Code**
-
+- **Linux:** pesquisa, filtragem e organização de arquivos.
+- **SQL:** consultas e análise de dados relacionais.
+- **PostgreSQL:** execução das consultas no banco de dados `chicago_taxi`.
+- **Git:** controle de versão.
+- **GitHub:** armazenamento e publicação do projeto.
+- **VS Code:** edição dos arquivos e documentação.
 
 ## Estrutura do projeto
+
 ```text
 projeto-06-banco-de-dados/
+├── README.md
 ├── console/
+│   ├── tarefa-1-buscar-por-ip.md
+│   └── tarefa-2-separar-erros.md
 ├── evidencias/
-├── sql/
-└── README.md
+└── sql/
+    ├── consultas.sql
+    └── resultados.md
 ```
 
 ## Atividades desenvolvidas
 
-### 1. Console e análise de logs:
+### 1. Análise de logs com Linux
 
-- Localização de solicitações por endereço IP.
-- Filtragem de logs por data.
-- Separação de registros de erros HTTP `400`E `500`.
-- Criação e organização de diretórios e arquivos.
+**Tarefa 1 — Busca por endereço IP**
 
+- Pesquisa de registros com endereços IP iniciados por `233.201.`.
+- Utilização do comando `grep` para filtrar os registros.
+- **Resultado:** 2 registros encontrados.
 
-### 2. Consultas SQL:
+**Tarefa 2 — Separação de logs por código HTTP**
 
-- Contagem de veículos cadastrados.
-- Identificação de empresas com menores de 100 veículos.
-- Classificação de condições meteorológicas utilizando `CASE`.
-- Contagem de corridas por empresas utilizando `JOIN`e funções de agregações.
+- Seleção dos registros do dia 30/12/2019.
+- Separação das solicitações com códigos HTTP `400` e `500`.
+- Utilização dos comandos `grep`, `wc` e `mkdir`.
+- **Resultado:** 1.786 registros no arquivo principal, 172 registros com código HTTP `400` e 156 registros com código HTTP `500`.
 
+### 2. Consultas SQL
+
+**Tarefa 1 — Contagem de veículos distintos**
+
+- Utilização de `COUNT(DISTINCT vehicle_id)` para contar os veículos distintos.
+- **Resultado:** 5.500 veículos distintos.
+
+**Tarefa 2 — Empresas com menos de 100 veículos**
+
+- Agrupamento dos veículos por empresa.
+- Filtragem dos grupos com menos de 100 veículos.
+- Utilização de `GROUP BY`, `HAVING` e `ORDER BY`.
+
+**Tarefa 3 — Classificação das condições meteorológicas**
+
+- Análise dos registros de 05/11/2017.
+- Classificação das condições como `Good` ou `Bad`.
+- Utilização de `CASE`, `ILIKE` e filtros de data.
+
+**Tarefa 4 — Quantidade de viagens por empresa**
+
+- Contagem das viagens realizadas nos dias 15 e 16/11/2017.
+- Associação entre as tabelas `cabs` e `trips`.
+- Utilização de `JOIN`, `COUNT`, `GROUP BY` e `ORDER BY`.
+- **Resultado registrado:** Flash Cab, com 19.558 viagens.
 
 ## Resultados e validações
 
-Os comandos, as consultas SQL e seus resultados serão documentados à medida que cada atividade for executada e avaliada.
+Os comandos Linux foram utilizados para pesquisar, filtrar e organizar registros de log. As consultas SQL foram executadas no banco de dados `chicago_taxi` para obter e analisar os dados solicitados.
+
+- **Logs:** pesquisa por endereço IP e separação de registros por código HTTP.
+- **SQL:** contagem de veículos distintos, identificação de empresas com menos de 100 veículos, classificação meteorológica e contagem de viagens por empresa.
 
 ## Aprendizados
 
-Essa seção será atualizada com os principais aprendizados e as dificuldades resolvidas durante a execução do projeto.
+- Utilização de comandos Linux para pesquisar e filtrar arquivos de log.
+- Criação de diretórios e organização de arquivos pelo terminal.
+- Escrita de consultas SQL para selecionar, filtrar, contar e agrupar dados.
+- Aplicação de funções e comandos como `COUNT`, `DISTINCT`, `WHERE`, `GROUP BY`, `HAVING`, `ORDER BY`, `JOIN` e `CASE`.
+- Análise e interpretação de resultados.
+- Documentação técnica de atividades.
+- Utilização do Git e GitHub para controle de versão e publicação de projetos.
+
+## Evidências
+
+As capturas de tela das atividades serão organizadas na pasta `evidencias/`, incluindo:
+
+- Execução dos comandos Linux.
+- Resultados das consultas SQL.
+- Verificação dos arquivos gerados durante as tarefas.
 
 ## Autor
+
 **Rafael Reis**
 
-- [GitHub] (https://github.com/reischampoudry)
-- [LinkedIn] (https://www.linkedin.com/in/rafael-reis-qa)
+- GitHub: [https://github.com/reischampoudry](https://github.com/reischampoudry)
+- LinkedIn: [https://www.linkedin.com/in/rafael-reis-qa/](https://www.linkedin.com/in/rafael-reis-qa/)
