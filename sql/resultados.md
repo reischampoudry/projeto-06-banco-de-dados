@@ -16,4 +16,4 @@ A consulta classificou as condições climáticas de 5 de novembro de 2017 como 
 
 A consulta contou as viagens realizadas nos dias 15 e 16 de novembro de 2017, agrupadas por empresa e ordenadas da maior para a menor quantidade.
 
-**Empresa com mais viagens:** Flash Cab — 19.558 viagens.
+Empresa com mais viagens: Flash Cab — 19.558 viagens.
