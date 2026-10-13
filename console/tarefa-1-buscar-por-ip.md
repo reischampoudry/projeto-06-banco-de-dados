@@ -10,7 +10,7 @@ O comando utilizado para pesquisar os registros foi:
 
 
 ```bash
-grep -h'ˆ233\.201\.'logs/2019/12/*
+grep -h '^233\.201\.' logs/2019/12/*
 ```
 
 ## Explicação do comando
