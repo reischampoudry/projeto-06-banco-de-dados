@@ -103,11 +103,7 @@ Os comandos Linux foram utilizados para pesquisar, filtrar e organizar registros
 
 ## Evidências
 
-As capturas de tela das atividades serão organizadas na pasta `evidencias/`, incluindo:
-
-- Execução dos comandos Linux.
-- Resultados das consultas SQL.
-- Verificação dos arquivos gerados durante as tarefas.
+Os procedimentos e resultados desta etapa estão documentados nos arquivos da pasta `console/` e em `sql/resultados.md`. As capturas de tela das execuções não foram incluídas neste repositório.
 
 ## Autor
 
