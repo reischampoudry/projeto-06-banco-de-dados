@@ -29,6 +29,6 @@ grep -h '^233\.201\.' logs/2019/12/*
 233.201.182.9 - - [21/12/2019:21:56:20 +0000] "PATCH /users HTTP/1.1" 400 4118
 ```
 
-## Conclusão
+## Objetivo
 
-Foram encontradas duas solicitações com o endereço de IP iniciados por `233.201.` nos logs de dezembro de 2019. Ambas retornaram o código HTTP `400`.
+Localizar, nos logs de dezembro de 2019, todas as solicitações cujo endereço IP começa com `233.201.`.
