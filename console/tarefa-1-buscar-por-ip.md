@@ -17,7 +17,7 @@ grep -h '^233\.201\.' logs/2019/12/*
 
 - `grep`: pesquisa linhas que correspondem a um padrão.
 - `-h`: oculta os nomes dos arquivos na saída.
-- `ˆ`: indica o início da linha.
+- `^`: indica o início da linha.
 - `233\.201\.`: procura o prefixo literal `233.201.`.
 - `logs/2019/12/*`: seleciona os arquivos do diretório de dezembro de 2019.
 
